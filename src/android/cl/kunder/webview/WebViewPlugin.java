@@ -20,6 +20,7 @@ public class WebViewPlugin extends CordovaPlugin {
   private static final String LOG_TAG = "WebViewPlugin";
   private static CallbackContext subscribeCallbackContext = null;
   private static CallbackContext subscribeExitCallbackContext = null;
+  private static CallbackContext subscribeUpdatePlayerCallback = null;
   private static JSONArray results = null;
 
   public WebViewPlugin() {
@@ -113,6 +114,12 @@ public class WebViewPlugin extends CordovaPlugin {
       }
       this.cordova.getActivity().finish();
 
+    }
+    else if(action.equals("subscribeUpdatePlayerCallback")){
+      LOG.d(LOG_TAG, "update");
+      if(subscribeUpdatePlayerCallback != null){
+        subscribeUpdatePlayerCallback.success();
+      }
     }
 
     else {
