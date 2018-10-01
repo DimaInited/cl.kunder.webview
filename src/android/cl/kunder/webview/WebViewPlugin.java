@@ -117,6 +117,10 @@ public class WebViewPlugin extends CordovaPlugin {
     }
     else if(action.equals("subscribeUpdatePlayerCallback")){
       LOG.d(LOG_TAG, "update");
+      subscribeUpdatePlayerCallback = callbackContext;
+    }
+    else if(action.equals("callUpdate")){
+      LOG.d(LOG_TAG, "update");
       if(subscribeUpdatePlayerCallback != null){
         subscribeUpdatePlayerCallback.success();
       }
