@@ -40,8 +40,13 @@ module.exports = (function() {
     cordova.exec(successCallback, errorCallback, 'WebViewPlugin', 'subscribeUpdatePlayerCallback', []);
   };
   
+  var _update = function() {
+    cordova.exec(successCallback, errorCallback, 'WebViewPlugin', 'callUpdate', []);
+  };
+  
   return {
     SubscribeUpdatePlayerCallback: _subscribeUpdatePlayerCallback,
+    CallUpdate: _update,
     Show: _show,
     Hide: _hide,
     Close: _hide,
