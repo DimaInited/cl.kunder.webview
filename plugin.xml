@@ -12,8 +12,8 @@
 
     It's possible to modify this plugin to allow multiple webviews.
   </description>
-  <repo>https://github.com/Dima/cl.kunder.webview</repo>
-  <issue>https://github.com/Dima/cl.kunder.webview/issues</issue>
+  <repo>https://github.com/DimaInited/cl.kunder.webview</repo>
+  <issue>https://github.com/DimaInited/cl.kunder.webview/issues</issue>
   <license>Apache 2.0</license>
   <keywords>cordova, webview</keywords>
 
