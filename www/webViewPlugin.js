@@ -36,12 +36,12 @@ module.exports = (function() {
     cordova.exec(function(){},function(){}, 'WebViewPlugin', 'webViewAdjustmenBehavior', []);
   };
 
-  var _subscribeUpdatePlayerCallback = function() {
+  var _subscribeUpdatePlayerCallback = function(successCallback, errorCallback) {
     cordova.exec(successCallback, errorCallback, 'WebViewPlugin', 'subscribeUpdatePlayerCallback', []);
   };
   
   var _update = function() {
-    cordova.exec(successCallback, errorCallback, 'WebViewPlugin', 'callUpdate', []);
+    cordova.exec(function(){},function(){}, 'WebViewPlugin', 'callUpdate', []);
   };
   
   return {
